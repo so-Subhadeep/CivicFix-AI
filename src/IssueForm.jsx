@@ -7,15 +7,10 @@ function IssueForm() {
   const [title, setTitle] = useState("");
   const [location, setLocation] = useState("");
   const [description, setDescription] = useState("");
-  const [images, setImages] = useState([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   
 
-  const handleImageChange = (e) => {
-    const files = Array.from(e.target.files).slice(0, 5);
-    setImages(files);
-  };
 
   const handleGenerateDescription = async () => {
     if (!title) {
@@ -110,7 +105,7 @@ function IssueForm() {
 
           <div className="form-group">
             <label className="form-label">Upload Images</label>
-            <input type="file" multiple onChange={handleImageChange} />
+            
           </div>
 
           <div className="form-group">
