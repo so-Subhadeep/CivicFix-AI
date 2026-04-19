@@ -54,7 +54,6 @@ function IssueForm() {
       setTitle("");
       setLocation("");
       setDescription("");
-      setImages([]);
 
     } catch (error) {
       console.error("Error adding document: ", error);
